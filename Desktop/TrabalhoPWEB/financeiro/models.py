@@ -65,3 +65,15 @@ class FornecedorPessoaJuridica(PessoaJuridica):
 
     def __str__(self):
         return "%s " % (self.cliente)
+ 
+class LancamentosReceber(ClientePessoaFisica, ClientePessoaJuridica, Empresa):
+    identificador = models.PositiveIntegerField(primary_key=True)
+    cliente = models.ForeignKey(ClientePessoaJuridica, ClientePessoaFisica, related_name="+")
+    empresa = models.ForeignKey(Empresa, related_name="+")
+    data_vencimento = models.DateField
+    data_emissao = models.dateField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>")
+    valor_titulo = models.FloatField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>")
+    numero_documento = models.CharFiedl(max_length=20)
+    
+    def __str__(self):
+        return "%s %s %s %s %s %s %s " % (self.identificador, self.cliente, self.empresa, self.data_vencimento, self.data_emissao, self.valor_titulo, self.numero_documento)
