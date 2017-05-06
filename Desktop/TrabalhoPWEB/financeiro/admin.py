@@ -8,4 +8,3 @@ admin.site.register(ClientePessoaJuridica)
 admin.site.register(Empresa)
 admin.site.register(FornecedorPessoaFisica)
 admin.site.register(FornecedorPessoaJuridica)
-

@@ -1,0 +1,41 @@
+{% extends 'financeiro/base.html' %}
+
+{% block content %}
+<div class="container">
+
+   <h2>Conta Bancária</h2>
+
+<form>
+  <div class="form-group">
+    <label for="classificacao">Classificação:</label>
+    <input type="text" class="form-control" id="classificacao">
+  </div>
+
+  <div class="form-group">
+    <label for="descricao">Descriçao:</label>
+    <input type="text" class="form-control" id="descricao">
+  </div>
+
+  <div class="form-group">
+    <label for="conta">Número da Conta:</label>
+    <input type="text" class="form-control" id="conta">
+  </div>
+
+  <div class="form-group">
+    <label for="agencia">Número da Agência:</label>
+    <input type="text" class="form-control" id="agencia">
+  </div>
+
+  <div class="form-group">
+    <label for="data">Data Inicial:</label>
+    <input type="date" class="form-control" id="data">
+  </div>
+
+  <div class="form-group">
+    <label for="saldo">Saldo Inicial:</label>
+    <input type="float" class="form-control" id="saldo">
+  </div>
+</form>
+<button type="submit" class="btn btn-default">Salvar</button>
+</div>
+{% endblock %}

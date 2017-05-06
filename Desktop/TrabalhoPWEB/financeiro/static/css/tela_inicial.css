@@ -1,0 +1,27 @@
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.jumbotron {
+    background-color: #40E0D0;
+    color: #fff;
+    padding: 100px 25px;
+}
+.container-fluid {
+    padding: 60px 50px;
+}
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }

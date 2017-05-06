@@ -157,6 +157,16 @@ class PlanoDeContas(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s %s %s   " % (self.id_plano_contas, self.contas_bancarias, self.classificacao, self.tipo_conta, self.descricao, self.caixa, self.banco, self.cliente, self.fornecedor, self.entrada_recurso, self.saida_recurso)
 
-
+class Tesouraria(models.Model):
+    empresa = models.ForeignKey(Empresa, related_name="+")
+    cliente = models.ForeignKey(ClientePessoaJuridica, related_name="+")
+    fornecedor = models.ForeignKey(FornecedorPessoaJuridica, related_name="+")
+    conta_entrada = models.ForeignKey(ContasBancarias, related_name="+")
+    conta_saida = models.ForeignKey(ContasBancarias, related_name="+")
+    valor = models.FloatField
+    numero_documento = models.IntegerField
+    data_emissao = models.DateField
+    data_vencimento = models.DateField
+    data_disponibilidade = models.DateField
 
 

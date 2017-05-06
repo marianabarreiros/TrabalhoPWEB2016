@@ -1,0 +1,103 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>Aplicativo de Finanças</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap/3.3.7/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap/3.3.7/bootstrap-theme.min.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/tela_inicial.css' %}">
+    </head>
+    <body>
+
+    <nav class="navbar navbar-default">
+        <!--Logo -->
+        <div class="navbar-header">
+            <a href="{% url 'tela_inicial' %}" class="navbar-brand">SISTEMA FINANCEIRO</a>
+        </div>
+        <!-- Itens do Menu mais o DropDown-->
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'cadastro_empresa' %}">Empresa</a></li>
+                        <!--
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Pessoa<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="{% url 'cadastro_cliente_fisico' %}">Pessoa Física</a></li>
+                                <li><a tabindex="-1" href="#">Pessoa Jurídica</a></li>
+                            </ul>
+                        </li>
+                        -->
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Fornecedor<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="{% url 'cadastro_fornecedor_fisico' %}">Fornecedor Físico</a></li>
+                                <li><a tabindex="-1" href="{% url 'cadastro_fornecedor_juridico' %}">Fornecedor Jurídico</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Cliente<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="{% url 'cadastro_cliente_fisico' %}">Cliente Físico</a></li>
+                                <li><a tabindex="-1" href="{% url 'cadastro_cliente_juridico' %}">Cliente Jurídico</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="{% url 'cadastro_plano_de_conta' %}">Plano de Conta</a></li>
+
+                        <li><a href="{% url 'cadastro_formas_de_pagamento' %}">Formas de Pagamento</a></li>
+
+                        <li><a href="{% url 'cadastro_conta_bancaria' %}">Contas Bancarias</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Movimento<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'cadastro_tesouraria' %}">Tesouraria</a></li>
+
+                        <li class="dropdown-submenu">
+                            <a class="test" tabindex="-1" href="#">Lançamentos<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="{% url 'cadastro_lancamentos_receber' %}">Lançamentos a Receber</a></li>
+                                    <li><a tabindex="-1" href="{% url 'cadastro_lancamentos_pagar' %}">Lançamentos a Pagar</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a class="test" tabindex="-1" href="#">Baixas<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="{% url 'cadastro_baixas_receber' %}">Baixas a Receber</a></li>
+                                    <li><a tabindex="-1" href="{% url 'cadastro_baixas_pagar' %}">Baixas a Pagar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+    </body>
+</html>

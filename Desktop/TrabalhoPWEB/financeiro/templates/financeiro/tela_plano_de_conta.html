@@ -1,0 +1,72 @@
+{% extends 'financeiro/base.html' %}
+
+{% block content %}
+<div class="container">
+
+   <h2>Plano de conta</h2>
+
+<form>
+  <div class="form-group">
+    <label for="conta_bancaria">Conta Banc[aria :</label>
+    <input type="text" class="form-control" id="conta_bancaria">
+  </div>
+
+   <div class="form-group">
+    <label for="classificacao">Classificacao:</label>
+    <input type="text" class="form-control" id="classificacao">
+   </div>
+
+   <div class="form-group">
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Corrente
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Poupanca
+    </label>
+  </div>
+
+   <div class="form-group">
+    <label for="descricao">Descricao:</label>
+    <input type="text" class="form-control" id="descricao">
+  </div>
+
+   <div class="form-group">
+    <label for="caixa">Caixa:</label>
+    <input type="text" class="form-control" id="caixa">
+  </div>
+
+  <div class="form-group">
+    <label for="banco">Banco:</label>
+    <input type="text" class="form-control" id="banco">
+  </div>
+
+
+   <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">UF
+    <span class="caret"></span></button>
+       <ul class="dropdown-menu">
+        <li><a href="#">BA</a></li>
+        <li><a href="#">SP</a></li>
+        <li><a href="#">GO</a></li>
+        </ul>
+   </div>
+
+
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="text" class="form-control" id="telefone">
+    </div>
+
+   <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Salvar</button>
+</form>
+
+</div>
+{% endblock %}
