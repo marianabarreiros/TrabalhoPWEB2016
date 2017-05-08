@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'financeiro/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="container">
+
+<h2>Baixas a Pagar</h2>
+
+<form>
+  <div class="form-group">
+    <label for="id">Identificador de Baixa a Pagar:</label>
+    <input type="text" class="form-control" id="id">
+  </div>
+
+  <div class="form-group">
+    <label for="pagamento">Forma de Pagamento:</label>
+    <input type="text" class="form-control" id="pagamento">
+  </div>
+
+  <div class="form-group">
+    <label for="lancamento">Lançamento a Pagar:</label>
+    <input type="text" class="form-control" id="lancamento">
+  </div>
+    
+  <div class="form-group">
+    <label for="banco">Banco:</label>
+    <input type="date" class="form-control" id="banco">
+  </div>
+    
+  <div class="form-group">
+    <label for="disponibilidade">Disponibilidade:</label>
+    <input type="date" class="form-control" id="disponibilidade">
+  </div>
+
+  <div class="form-group">
+    <label for="data">Data de Baixa:</label>
+    <input type="text" class="form-control" id="data">
+  </div>
+
+  <div class="form-group">
+    <label for="valor">Valor Pago:</label>
+    <input type="text" class="form-control" id="valor">
+  </div>
+
+  <div class="form-group">
+    <label for="residual">Residual:</label>
+    <input type="text" class="form-control" id="residual">
+  </div>
+    
+</form>
+<button type="submit" class="btn btn-default">Salvar</button>
+</div>
+{% endblock %}

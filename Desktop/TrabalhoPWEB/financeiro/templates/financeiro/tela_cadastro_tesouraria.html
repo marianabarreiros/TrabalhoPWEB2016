@@ -1,10 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'financeiro/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="container">
+
+<h2>Tesouraria</h2>
+
+<form>
+  <div class="form-group">
+    <label for="empresa">Empresa:</label>
+    <input type="text" class="form-control" id="empresa">
+  </div>
+
+  <div class="form-group">
+    <label for="cliente">Cliente:</label>
+    <input type="text" class="form-control" id="cliente">
+  </div>
+
+  <div class="form-group">
+    <label for="entrada">Conta Entrada:</label>
+    <input type="text" class="form-control" id="entrada">
+  </div>
+
+  <div class="form-group">
+    <label for="saida">Conta Saída:</label>
+    <input type="text" class="form-control" id="saida">
+  </div>
+
+  <div class="form-group">
+    <label for="valor">Valor:</label>
+    <input type="text" class="form-control" id="valor">
+  </div>
+
+  <div class="form-group">
+    <label for="documento">Número Documento:</label>
+    <input type="text" class="form-control" id="documento">
+  </div>
+
+  <div class="form-group">
+    <label for="emissao">Data Emissão:</label>
+    <input type="date" class="form-control" id="emissao">
+  </div>
+
+  <div class="form-group">
+    <label for="vencimento">Data Vencimento:</label>
+    <input type="date" class="form-control" id="vencimento">
+  </div>
+
+  <div class="form-group">
+    <label for="disponibilidade">Data Disponibilidade:</label>
+    <input type="date" class="form-control" id="disponibilidade">
+  </div>
+</form>
+<button type="submit" class="btn btn-default">Salvar</button>
+</div>
+{% endblock %}

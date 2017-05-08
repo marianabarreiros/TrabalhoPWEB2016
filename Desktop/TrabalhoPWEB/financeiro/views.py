@@ -29,17 +29,17 @@ def tela_conta_bancaria(request):
     return render(request, 'financeiro/tela_cadastro_conta_bancaria.html', {})
 
 def tela_baixas_pagar(request):
-    return render(request, 'financeiro/tela_cadastro_baixas_pagar', {})
+    return render(request, 'financeiro/tela_cadastro_baixas_pagar.html', {})
 
 def tela_baixas_receber(request):
-    return render(request, 'financeiro/tela_cadastro_baixas_receber', {})
+    return render(request, 'financeiro/tela_cadastro_baixas_receber.html', {})
 
 def tela_lancamentos_pagar(request):
-    return render(request, 'financeiro/tela_cadastro_lancamentos_pagar', {})
+    return render(request, 'financeiro/tela_cadastro_lancamentos_pagar.html', {})
 
 def tela_lancamentos_receber(request):
-    return render(request, 'financeiro/tela_cadastro_lancamentos_receber', {})
+    return render(request, 'financeiro/tela_cadastro_lancamentos_receber.html', {})
 
 def tela_tesouraria(request):
-    return render(request, 'financeiro/tela_cadastro_tesouraria', {})
+    return render(request, 'financeiro/tela_cadastro_tesouraria.html', {})
 
