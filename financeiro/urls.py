@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^cadastro_baixas_pagar$', views.tela_baixas_pagar, name='cadastro_baixas_pagar'),
     url(r'^cadastro_lancamentos_pagar$', views.tela_lancamentos_pagar, name='cadastro_lancamentos_pagar'),
     url(r'^cadastro_lancamentos_receber$', views.tela_lancamentos_receber, name='cadastro_lancamentos_receber'),
-
+    url(r'^conta_a_receber_baixa$', views.tela_conta_a_receber_baixa, name='conta_a_receber_baixa'),
 
 
 ]

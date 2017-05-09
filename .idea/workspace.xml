@@ -4,7 +4,13 @@
     <list default="true" id="c31b59da-a82f-4075-91ed-6865df7c2a61" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/templates/financeiro/base.html" afterPath="$PROJECT_DIR$/financeiro/templates/financeiro/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/models.py" afterPath="$PROJECT_DIR$/financeiro/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html" afterPath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html" afterPath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_baixa.html" afterPath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_baixa.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_movimento.html" afterPath="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_movimento.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/urls.py" afterPath="$PROJECT_DIR$/financeiro/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financeiro/views.py" afterPath="$PROJECT_DIR$/financeiro/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,10 +25,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="138">
               <caret line="106" column="80" lean-forward="false" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
               <folding />
             </state>
@@ -39,42 +45,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tela_cadastro_cliente_juridico.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/tela_cadastro_cliente_juridico.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tela_cadastro_empresa.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/tela_cadastro_empresa.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tela_tesouraria_movimento.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/tesouraria/tela_tesouraria_movimento.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tela_conta_a_receber_baixa.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_baixa.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="165">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/financeiro/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="97" lean-forward="false" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/financeiro/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/financeiro/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="94" lean-forward="false" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,18 +92,18 @@
       <file leaf-file-name="tela_conta_a_receber_movimento.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_movimento.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="195">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tela_conta_a_pagar_movimento.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tela_conta_a_pagar_movimento.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+              <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -103,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+              <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -136,29 +146,31 @@
       <list>
         <option value="$PROJECT_DIR$/static/admin/css/tela_inicial.css" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_inicial.html" />
-        <option value="$PROJECT_DIR$/financeiro/models.py" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_cadastro_cliente_fisico.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_forncedor_fisico.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_fornecedor_juridico.html" />
-        <option value="$PROJECT_DIR$/financeiro/urls.py" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_fornecedor_fisico.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_cadastro_cliente_juridico.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/tela_cadastro_empresa.html" />
-        <option value="$PROJECT_DIR$/financeiro/views.py" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/tesouraria/tela_tesouraria_movimento.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_contas_a_pagar_movimento.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_pagar_receber.html" />
-        <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html" />
-        <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/tesouraria/tela_tesouraria_fluxo_de_caixa.html" />
         <option value="$PROJECT_DIR$/financeiro/templates/financeiro/base.html" />
+        <option value="$PROJECT_DIR$/financeiro/urls.py" />
+        <option value="$PROJECT_DIR$/financeiro/views.py" />
+        <option value="$PROJECT_DIR$/financeiro/models.py" />
+        <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_movimento.html" />
+        <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_baixa.html" />
+        <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html" />
+        <option value="$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
+    <option name="x" value="48" />
     <option name="y" value="52" />
-    <option name="width" value="1301" />
+    <option name="width" value="655" />
     <option name="height" value="715" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -249,10 +261,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="relatorio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tesouraria" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,10 +517,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="52" width="1301" height="715" extended-state="0" />
-    <editor active="true" />
+    <frame x="48" y="52" width="655" height="715" extended-state="4" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8022152" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.70253164" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -564,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -579,7 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="44" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -603,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,9 +623,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,7 +631,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2565">
           <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,7 +641,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="44" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,9 +694,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +702,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,7 +712,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -715,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,9 +751,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +759,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -764,7 +769,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -772,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,19 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2565">
-          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/tela_fornecedor_fisico.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,17 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="103" lean-forward="false" selection-start-line="8" selection-start-column="103" selection-end-line="8" selection-end-column="103" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -850,15 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="78" lean-forward="false" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1707">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,38 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_baixa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_movimento.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/tesouraria/tela_tesouraria_fluxo_de_caixa.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -960,8 +901,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="138">
           <caret line="106" column="80" lean-forward="false" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="97" lean-forward="false" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="94" lean-forward="false" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_baixa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_baixa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_receber/tela_conta_a_receber_movimento.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/financeiro/templates/financeiro/relatorio/contas_a_pagar/tela_conta_a_pagar_movimento.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding />
         </state>
       </provider>

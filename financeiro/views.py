@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def tela_inicial(request):
@@ -43,3 +44,5 @@ def tela_lancamentos_receber(request):
 def tela_tesouraria(request):
     return render(request, 'financeiro/tela_cadastro_tesouraria.html', {})
 
+def tela_conta_a_receber_baixa(request):
+    tupla = BaixasReceber.object

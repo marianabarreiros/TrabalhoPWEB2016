@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'financeiro/base.html' %}
 
-</body>
-</html>
+{% block content %}
+{% for post in posts %}
+<h1>Relatório de Lançamentos de Contas a Receber</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Data Emissão</th>
+        <th>Cliente</th>
+        <th>Valor Título</th>
+        <th>Vencimento</th>
+        <th>Nr. Documento</th>
+        <th>Empresa</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for tupla in tupla %}
+    <tr>
+       <td></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+{% endblock content %}
