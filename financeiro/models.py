@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class Pessoa(models.Model):
@@ -20,7 +21,7 @@ class Pessoa(models.Model):
 
 class PessoaFisica(Pessoa):
     cpf = models.CharField(max_length=15, primary_key=True, help_text="Use o seguinte formato: <em>xxx.xxx.xxx-xx</em>")
-    data_nascimento = models.DateField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>")
+    data_nascimento = models.DateField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", default=datetime.date.today)
     funcao = models.CharField(max_length=50)
 
     def __str__(self):
