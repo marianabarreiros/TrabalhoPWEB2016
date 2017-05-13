@@ -3,8 +3,6 @@ import datetime
 
 # Create your models here.
 class Pessoa(models.Model):
-    nome = models.CharField(max_length=50, default='', verbose_name='Nome')
-    sobrenome = models.CharField(max_length=100, default='', verbose_name='Sobrenome')
     endereco = models.CharField(max_length=50, default='', verbose_name='Endereço')
     bairro = models.CharField(max_length=50, default='', verbose_name='Bairro')
     municipio = models.CharField(max_length=50, default='',verbose_name='Município')
@@ -18,33 +16,33 @@ class Pessoa(models.Model):
 
 
 class PessoaFisica(Pessoa):
+    nome = models.CharField(max_length=50, default='', verbose_name='Nome')
+    sobrenome = models.CharField(max_length=100, default='', verbose_name='Sobrenome')
     cpf = models.CharField(max_length=15, primary_key=True, help_text="Use o seguinte formato: <em>xxx.xxx.xxx-xx</em>", verbose_name='CPF')
     data_nascimento = models.DateField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", default=datetime.date.today, verbose_name='Data de Nascimento')
     funcao = models.CharField(max_length=49, verbose_name='Funçao')
 
     def __str__(self):
-        return "%s %s %s " % (self.cpf, self.data_nascimento, self.funcao)
-
+        return "%s %s  " % (self.nome, self.sobrenome)
     class Meta:
         verbose_name = "Pessoa Física"
         verbose_name_plural = "Pessoas Física"
 
 class PessoaJuridica(Pessoa):
-    cnpj = models.CharField(max_length=15, primary_key=True, verbose_name='CNPJ')
     razao_social = models.CharField(max_length=45, verbose_name='Razão Social')
+    cnpj = models.CharField(max_length=15, primary_key=True, verbose_name='CNPJ')
 
     def __str__(self):
-        return "%s %s" % (self.cnpj, self.razao_social)
+        return "%s %s" % (self.razao_social, self.cnpj)
 
     class Meta:
         verbose_name = "Pessoa Jurídica"
         verbose_name_plural = "Pessoas Jurídica"
 
 class ClientePessoaFisica(PessoaFisica):
-    cpf_do_vendedor = models.ForeignKey(PessoaFisica, related_name='+', verbose_name='CPF do Vendedor')
 
     def __str__(self):
-        return "%s " % (self.cpf_do_vendedor)
+        return "%s %s " % (self.nome, self.sobrenome)
 
     class Meta:
         verbose_name = "Cliente Pessoa Física"
@@ -52,10 +50,9 @@ class ClientePessoaFisica(PessoaFisica):
 
 
 class ClientePessoaJuridica(PessoaJuridica):
-    cnpj_do_vendedor = models.ForeignKey(PessoaJuridica, related_name='+', verbose_name='CNPJ do Vendedor')
 
     def __str__(self):
-        return "%s " % (self.cnpj_do_vendedor)
+        return "%s %s " % (self.razao_social, self.cnpj)
 
     class Meta:
         verbose_name = "Cliente Pessoa Jurídica"
@@ -67,27 +64,27 @@ class Empresa(PessoaJuridica):
     inscricao_municipal = models.CharField(max_length=20, verbose_name='Inscrição Municipal')
 
     def __str__(self):
-        return "%s %s %s" % (self.responsavel, self.inscricao_municipal, self.inscricao_estadual)
+        return "%s %s " % (self.razao_social, self.cnpj)
 
     class Meta:
         verbose_name = "Empresa"
         verbose_name_plural = "Empresas"
 
 class FornecedorPessoaFisica(PessoaFisica):
-    cliente_fpf = models.ForeignKey(PessoaFisica, related_name='+', verbose_name='Cliente')
+    cliente = models.ForeignKey(PessoaFisica, related_name='+', verbose_name='Cliente')
 
     def __str__(self):
-        return "%s " % (self.cliente)
+        return "%s %s " % (self.nome, self.sobrenome)
 
     class Meta:
         verbose_name = "Fornecedor Físico"
         verbose_name_plural = "Fornecedores Físicos"
 
 class FornecedorPessoaJuridica(PessoaJuridica):
-    cliente_fpj = models.ForeignKey(PessoaJuridica, related_name='+', verbose_name='Cliente')
+    cliente = models.ForeignKey(PessoaJuridica, related_name='+', verbose_name='Cliente')
 
     def __str__(self):
-        return "%s " % (self.cliente)
+        return "%s %s " % (self.razao_social, self.cnpj)
 
     class Meta:
         verbose_name = "Fornecedor Júridico"
