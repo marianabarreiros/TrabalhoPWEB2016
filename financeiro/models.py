@@ -91,8 +91,9 @@ class FornecedorPessoaJuridica(PessoaJuridica):
         verbose_name_plural = "Fornecedores Júridicos"
 
 class LancamentosReceber(models.Model):
-    id_lancamentos_receber = models.PositiveIntegerField(primary_key=True, verbose_name='Identificação do Lançamento a Receber')
-    cliente = models.ForeignKey(ClientePessoaJuridica, ClientePessoaFisica, related_name="+", verbose_name='Cliente')
+    id_lancamentos_receber = models.AutoField(primary_key=True, verbose_name='Identificação do Lançamento a Receber')
+    clienteFisico = models.ForeignKey(ClientePessoaFisica, related_name="+", verbose_name='Cliente Fisico', default="None", null=True, blank="True")
+    clienteJuridico = models.ForeignKey(ClientePessoaJuridica, related_name="+", verbose_name='Cliente Juridico', default="None", null=True, blank="True")
     empresa = models.ForeignKey(Empresa, related_name="+", verbose_name='Empresa')
     data_vencimento = models.DateField(default=datetime.date.today, verbose_name='Data de Vencimento')
     data_emissao = models.DateField(default=datetime.date.today, help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", verbose_name='Data de Emissão')
@@ -100,15 +101,16 @@ class LancamentosReceber(models.Model):
     numero_documento = models.CharField(max_length=20, verbose_name='Número do Documento')
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s " % (self.identificador, self.cliente, self.empresa, self.data_vencimento, self.data_emissao, self.valor_titulo, self.numero_documento)
+        return "%s %s " % (self.id_lancamentos_receber, self.numero_documento)
 
     class Meta:
         verbose_name = "Laçamento a Receber"
         verbose_name_plural = "Laçamentos a Receber"
 
 class LancamentosPagar(models.Model):
-    id_lancamentos_pagar = models.PositiveIntegerField(primary_key=True, verbose_name='Identificação do Lançamento a Pagar')
-    fornecedor = models.ForeignKey(FornecedorPessoaFisica, FornecedorPessoaJuridica, related_name="+", verbose_name='Fornecedor')
+    id_lancamentos_pagar = models.AutoField(primary_key=True, verbose_name='Identificação do Lançamento a Receber')
+    fornecedorFisico = models.ForeignKey(FornecedorPessoaFisica, related_name="+", verbose_name='Fornecedor Fisico', default="None", null=True, blank="True")
+    fornecedorJuridico = models.ForeignKey(FornecedorPessoaJuridica, related_name="+", verbose_name='Fornecedor Juridico', default="None", null=True, blank="True")
     empresa = models.ForeignKey(Empresa, related_name="+", verbose_name='Empresa')
     data_vencimento = models.DateField(default=datetime.date.today, verbose_name='Data de Vencimento')
     data_emissao = models.DateField(default=datetime.date.today, help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", verbose_name='Data de Emissão')
@@ -116,7 +118,7 @@ class LancamentosPagar(models.Model):
     numero_documento = models.CharField(max_length=20, verbose_name='Número de Documento')
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s " % (self.identificador, self.fornecedor, self.empresa, self.data_vencimento, self.data_emissao, self.valor_titulo, self.numero_documento)
+        return "%s %s " % (self.id_lancamentos_pagar, self.numero_documento)
 
     class Meta:
         verbose_name = "Laçamento a Pagar"
