@@ -17,8 +17,9 @@ from .models import PlanoDeContas
 from .models import Tesouraria
 from .models import BaixasPagar
 from .models import BaixasReceber
+from .forms import LancamentoReceberForm
 
-this_path = os.getcwd() + '/financeiro/'
+#this_path = os.getcwd() + '/financeiro/'
 # Create your views here.
 def tela_inicial(request):
     return render(request, 'financeiro/tela_inicial.html', {})
@@ -57,7 +58,13 @@ def tela_lancamentos_pagar(request):
     return render(request, 'financeiro/tela_cadastro_lancamentos_pagar.html', {})
 
 def tela_lancamentos_receber(request):
-    return render(request, 'financeiro/tela_cadastro_lancamentos_receber.html', {})
+    form = LancamentoReceberForm()
+    return render(request, 'financeiro/tela_cadastro_lancamentos_receber.html', {'form': form})
+
+def lancamentos_receber(request):
+    form = LancamentoReceberForm()
+    return render(request, 'financeiro/Tela_cadastro_lancamentos_receber.html', {'form': form})
+
 
 def tela_tesouraria(request):
     return render(request, 'financeiro/tela_cadastro_tesouraria.html', {})

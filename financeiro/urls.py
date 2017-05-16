@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^cadastro_baixas_pagar$', views.tela_baixas_pagar, name='cadastro_baixas_pagar'),
     url(r'^cadastro_lancamentos_pagar$', views.tela_lancamentos_pagar, name='cadastro_lancamentos_pagar'),
     url(r'^cadastro_lancamentos_receber$', views.tela_lancamentos_receber, name='cadastro_lancamentos_receber'),
+    url(r'^lancamentos_receber_new$', views.lancamentos_receber, name='lancamentos_receber'),
 
     #Url's para o trazer as informações do relatório
     #url(r'^$', views.index, name='index'),
