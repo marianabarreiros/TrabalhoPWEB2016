@@ -1,0 +1,40 @@
+{% extends 'financeiro/base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Sistema Financeiro</h2>
+  <p>Relatório de Contas a Receber:</p>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th>identificação</th>
+          <th>Cliente Físico</th>
+          <th>Cliente Jurídico</th>
+          <th>Empresa</th>
+          <th>Data de Vencimento</th>
+          <th>Data de Emissão</th>
+          <th>Valor Título</th>
+          <th>Documento</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for r in receber %}
+      <tr>
+          <td>{{r.id_lancamentos_receber}}</td>
+          <td>{{r.clienteFisico}}</td>
+          <td>{{r.clienteJuridico}}</td>
+          <td>{{r.empresa}}</td>
+          <td>{{r.data_vencimento}}</td>
+          <td>{{r.data_emissao}}</td>
+          <td>{{r.valor_titulo}}</td>
+          <td>{{r.numero_documento}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+    <button type="submit" class="btn btn-default">Gerar PDF</button>
+</div>
+
+{% endblock %}

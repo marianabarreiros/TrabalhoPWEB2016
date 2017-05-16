@@ -3,6 +3,8 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.tela_inicial, name='tela_inicial'),
+
+    #Url's para o cadastro das informações
     url(r'^cadastro_cliente_fisico$', views.tela_cadastro_cliente_fisico, name='cadastro_cliente_fisico'),
     url(r'^cadastro_cliente_juridico$', views.tela_cadastro_cliente_juridico, name='cadastro_cliente_juridico'),
     url(r'^cadastro_empresa$', views.tela_cadastro_empresa, name='cadastro_empresa'),
@@ -16,6 +18,14 @@ urlpatterns = [
     url(r'^cadastro_baixas_pagar$', views.tela_baixas_pagar, name='cadastro_baixas_pagar'),
     url(r'^cadastro_lancamentos_pagar$', views.tela_lancamentos_pagar, name='cadastro_lancamentos_pagar'),
     url(r'^cadastro_lancamentos_receber$', views.tela_lancamentos_receber, name='cadastro_lancamentos_receber'),
+
+    #Url's para o trazer as informações do relatório
+    #url(r'^$', views.index, name='index'),
+    url(r'^recupera_contas_receber$', views.tela_recupera_contas_receber, name='recupera_contas_receber'),
+    url(r'^recupera_contas_pagar$', views.tela_recupera_contas_pagar, name='recupera_contas_pagar'),
+    url(r'^recupera_movimentos$', views.tela_recupera_movimentos, name='recupera_movimentos'),
+    url(r'^recupera_fluxo_caixa$', views.tela_recupera_fluxo_caixa, name='recupera_fluxo_caixa'),
+
 
 
 

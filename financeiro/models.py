@@ -11,6 +11,9 @@ class Pessoa(models.Model):
     telefone = models.CharField(max_length=20, help_text="Use o seguinte formato: <em>071999998888 ou 32220000</em>", default='', verbose_name='Telefone')
     email = models.EmailField(max_length=50, default='', verbose_name='E-mail')
 
+    def salvar(self):
+        self.save()
+
     class Meta:
         abstract = True
 
@@ -22,8 +25,12 @@ class PessoaFisica(Pessoa):
     data_nascimento = models.DateField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", default=datetime.date.today, verbose_name='Data de Nascimento')
     funcao = models.CharField(max_length=49, verbose_name='Funçao')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s  " % (self.nome, self.sobrenome)
+
     class Meta:
         verbose_name = "Pessoa Física"
         verbose_name_plural = "Pessoas Física"
@@ -31,6 +38,9 @@ class PessoaFisica(Pessoa):
 class PessoaJuridica(Pessoa):
     razao_social = models.CharField(max_length=45, verbose_name='Razão Social')
     cnpj = models.CharField(max_length=15, primary_key=True, verbose_name='CNPJ')
+
+    def salvar(self):
+        self.save()
 
     def __str__(self):
         return "%s %s" % (self.razao_social, self.cnpj)
@@ -41,6 +51,9 @@ class PessoaJuridica(Pessoa):
 
 class ClientePessoaFisica(PessoaFisica):
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s " % (self.nome, self.sobrenome)
 
@@ -50,6 +63,9 @@ class ClientePessoaFisica(PessoaFisica):
 
 
 class ClientePessoaJuridica(PessoaJuridica):
+
+    def salvar(self):
+        self.save()
 
     def __str__(self):
         return "%s %s " % (self.razao_social, self.cnpj)
@@ -63,6 +79,9 @@ class Empresa(PessoaJuridica):
     inscricao_estadual = models.CharField(max_length=20, verbose_name='Inscrição Estadual')
     inscricao_municipal = models.CharField(max_length=20, verbose_name='Inscrição Municipal')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s " % (self.razao_social, self.cnpj)
 
@@ -73,6 +92,9 @@ class Empresa(PessoaJuridica):
 class FornecedorPessoaFisica(PessoaFisica):
     cliente = models.ForeignKey(PessoaFisica, related_name='+', verbose_name='Cliente')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s " % (self.nome, self.sobrenome)
 
@@ -82,6 +104,9 @@ class FornecedorPessoaFisica(PessoaFisica):
 
 class FornecedorPessoaJuridica(PessoaJuridica):
     cliente = models.ForeignKey(PessoaJuridica, related_name='+', verbose_name='Cliente')
+
+    def salvar(self):
+        self.save()
 
     def __str__(self):
         return "%s %s " % (self.razao_social, self.cnpj)
@@ -100,6 +125,9 @@ class LancamentosReceber(models.Model):
     valor_titulo = models.FloatField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", verbose_name='Valor do Título')
     numero_documento = models.CharField(max_length=20, verbose_name='Número do Documento')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s " % (self.id_lancamentos_receber, self.numero_documento)
 
@@ -117,6 +145,9 @@ class LancamentosPagar(models.Model):
     valor_titulo = models.FloatField(default=0, verbose_name='Valor do Título')
     numero_documento = models.CharField(max_length=20, verbose_name='Número de Documento')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s " % (self.id_lancamentos_pagar, self.numero_documento)
 
@@ -127,6 +158,9 @@ class LancamentosPagar(models.Model):
 class FormasPagamentos(models.Model):
     id_forma_pagamento = models.CharField(max_length= 10, primary_key=True, verbose_name='Forma de Pagamento')
     descricao = models.CharField(max_length= 20, verbose_name='Descrição')
+
+    def salvar(self):
+        self.save()
 
     def __str__(self):
         return "%s %s " % (self.idenid_forma_pagamento, self.descricao)
@@ -145,6 +179,9 @@ class BaixasReceber(models.Model):
     valor_pago = models.FloatField(default='0', verbose_name='Valor Pago')
     residual = models.CharField(max_length = 20, verbose_name='Residual')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s %s %s %s %s %s %s  " % (self.id_baixa_receber, self.id_forma_pagamento, self.id_lancamentos_receber, self.banco, self.disponibilidade, self.data_baixa, self.valor_pago, self.residual)
 
@@ -161,6 +198,9 @@ class BaixasPagar(models.Model):
     data_baixa = models.DateField(help_text="Use o seguinte formato: <em>DD/MM/AAAA</em>", verbose_name='Data da Baixa')
     valor_pago = models.FloatField(default= 0, verbose_name='Valo Pago')
     residual = models.CharField(max_length  = 20, verbose_name='Residual')
+
+    def salvar(self):
+        self.save()
 
     def __str__(self):
         return "%s %s %s %s %s %s %s %s  " % (self.id_baixa_pagar, self.id_forma_pagamento, self.id_lancamentos_pagar, self.banco, self.disponibilidade, self.data_baixa, self.valor_pago, self.residual)
@@ -179,6 +219,9 @@ class ContasBancarias(models.Model):
     saldo_inicial = models.FloatField(default=0, verbose_name='Saldo Inicial')
     caixa = models.CharField(max_length = 20, verbose_name='Caixa')
     banco = models.CharField(max_length = 20, verbose_name='Banco')
+
+    def salvar(self):
+        self.save()
 
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s   " % (self.id_contas_bancarias, self.classificacao, self.descricao, self.numero_conta, self.numero_agencia, self.data_saldo_inicial, self.saldo_inicial, self.caixa, self.banco)
@@ -201,6 +244,9 @@ class PlanoDeContas(models.Model):
     entrada_recurso = models.CharField(max_length  = 20, verbose_name='Entrada do Recurso')
     saida_recurso = models.CharField(max_length  = 20, verbose_name='Saída do Recurso')
 
+    def salvar(self):
+        self.save()
+
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s %s %s   " % (self.id_plano_contas, self.contas_bancarias, self.classificacao, self.tipo_conta, self.descricao, self.caixa, self.banco, self.cliente, self.fornecedor, self.entrada_recurso, self.saida_recurso)
 
@@ -219,6 +265,9 @@ class Tesouraria(models.Model):
     data_emissao = models.DateField(default=datetime.date.today, verbose_name='Data de Emissão')
     data_vencimento = models.DateField(default=datetime.date.today, verbose_name='Data de Vencimento')
     data_disponibilidade = models.DateField(default=datetime.date.today, verbose_name='Data de Disponibilidade')
+
+    def salvar(self):
+        self.save()
 
     class Meta:
         verbose_name = "Tesouraria"

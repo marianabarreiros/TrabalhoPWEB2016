@@ -1,0 +1,43 @@
+{% extends 'financeiro/base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Sistema Financeiro</h2>
+  <p>Relatório de Movimentos:</p>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th>Empresa</th>
+          <th>Cliente</th>
+          <th>Fornecedor</th>
+          <th>Conta Entrada</th>
+          <th>Conta Saída</th>
+          <th>Valor</th>
+          <th>Documento</th>
+          <th>Data Emissão</th>
+          <th>Data Vencimento</th>
+          <th>Data Disponibilidade</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for t in tesouraria %}
+      <tr>
+          <td>{{t.empresa}}</td>
+          <td>{{t.cliente}}</td>
+          <td>{{t.fornecedor}}</td>
+          <td>{{t.conta_entrada}}</td>
+          <td>{{t.conta_saida}}</td>
+          <td>{{t.valor}}</td>
+          <td>{{t.numero_documento}}</td>
+          <td>{{t.data_emissao}}</td>
+          <td>{{t.data_vencimento}}</td>
+          <td>{{t.data_disponibilidade}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+<button type="submit" class="btn btn-default">Gerar PDF</button>
+</div>
+{% endblock %}
