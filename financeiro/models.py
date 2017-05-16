@@ -43,7 +43,7 @@ class PessoaJuridica(Pessoa):
         self.save()
 
     def __str__(self):
-        return "%s %s" % (self.razao_social, self.cnpj)
+        return "%s " % (self.razao_social)
 
     class Meta:
         verbose_name = "Pessoa Jurídica"
@@ -68,7 +68,7 @@ class ClientePessoaJuridica(PessoaJuridica):
         self.save()
 
     def __str__(self):
-        return "%s %s " % (self.razao_social, self.cnpj)
+        return "%s " % (self.razao_social)
 
     class Meta:
         verbose_name = "Cliente Pessoa Jurídica"
@@ -83,7 +83,7 @@ class Empresa(PessoaJuridica):
         self.save()
 
     def __str__(self):
-        return "%s %s " % (self.razao_social, self.cnpj)
+        return "%s " % (self.razao_social)
 
     class Meta:
         verbose_name = "Empresa"
@@ -109,7 +109,7 @@ class FornecedorPessoaJuridica(PessoaJuridica):
         self.save()
 
     def __str__(self):
-        return "%s %s " % (self.razao_social, self.cnpj)
+        return "%s " % (self.razao_social)
 
     class Meta:
         verbose_name = "Fornecedor Júridico"
@@ -129,7 +129,7 @@ class LancamentosReceber(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s " % (self.id_lancamentos_receber, self.numero_documento)
+        return "%s " % (self.id_lancamentos_receber)
 
     class Meta:
         verbose_name = "Laçamento a Receber"
@@ -149,7 +149,7 @@ class LancamentosPagar(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s " % (self.id_lancamentos_pagar, self.numero_documento)
+        return "%s " % (self.id_lancamentos_pagar)
 
     class Meta:
         verbose_name = "Laçamento a Pagar"
@@ -163,7 +163,7 @@ class FormasPagamentos(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s " % (self.idenid_forma_pagamento, self.descricao)
+        return "%s " % (self.descricao)
 
     class Meta:
         verbose_name = "Forma de Pagamento"
@@ -183,7 +183,7 @@ class BaixasReceber(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s  " % (self.id_baixa_receber, self.id_forma_pagamento, self.id_lancamentos_receber, self.banco, self.disponibilidade, self.data_baixa, self.valor_pago, self.residual)
+        return "%s " % (self.id_baixa_receber)
 
     class Meta:
         verbose_name = "Baixa a Receber"
@@ -203,7 +203,7 @@ class BaixasPagar(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s  " % (self.id_baixa_pagar, self.id_forma_pagamento, self.id_lancamentos_pagar, self.banco, self.disponibilidade, self.data_baixa, self.valor_pago, self.residual)
+        return "%s " % (self.id_baixa_pagar)
 
     class Meta:
         verbose_name = "Baixa a Pagar"
@@ -224,7 +224,7 @@ class ContasBancarias(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s   " % (self.id_contas_bancarias, self.classificacao, self.descricao, self.numero_conta, self.numero_agencia, self.data_saldo_inicial, self.saldo_inicial, self.caixa, self.banco)
+        return "%s " % (self.numero_conta)
 
     class Meta:
         verbose_name = "Conta Bancária"
@@ -248,7 +248,7 @@ class PlanoDeContas(models.Model):
         self.save()
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s %s %s   " % (self.id_plano_contas, self.contas_bancarias, self.classificacao, self.tipo_conta, self.descricao, self.caixa, self.banco, self.cliente, self.fornecedor, self.entrada_recurso, self.saida_recurso)
+        return "%s " % (self.id_plano_contas)
 
     class Meta:
         verbose_name = "Baixa a Receber"
@@ -261,13 +261,16 @@ class Tesouraria(models.Model):
     conta_entrada = models.ForeignKey(ContasBancarias, related_name="+", verbose_name='Conta de Entrada')
     conta_saida = models.ForeignKey(ContasBancarias, related_name="+", verbose_name='Conta de Saída')
     valor = models.FloatField(default=0, verbose_name='Valor')
-    numero_documento = models.IntegerField(default=0, verbose_name='Númedo do Documnto')
+    numero_documento = models.CharField(default='', verbose_name='Númedo do Documnto', max_length  = 20)
     data_emissao = models.DateField(default=datetime.date.today, verbose_name='Data de Emissão')
     data_vencimento = models.DateField(default=datetime.date.today, verbose_name='Data de Vencimento')
     data_disponibilidade = models.DateField(default=datetime.date.today, verbose_name='Data de Disponibilidade')
 
     def salvar(self):
         self.save()
+
+    def __str__(self):
+        return "%s " % (self.empresa)
 
     class Meta:
         verbose_name = "Tesouraria"

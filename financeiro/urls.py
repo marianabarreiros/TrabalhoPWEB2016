@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^lancamentos_receber_new$', views.lancamentos_receber, name='lancamentos_receber'),
 
     #Url's para o trazer as informações do relatório
-    #url(r'^$', views.index, name='index'),
+
     url(r'^recupera_contas_receber$', views.tela_recupera_contas_receber, name='recupera_contas_receber'),
     url(r'^recupera_contas_pagar$', views.tela_recupera_contas_pagar, name='recupera_contas_pagar'),
     url(r'^recupera_movimentos$', views.tela_recupera_movimentos, name='recupera_movimentos'),

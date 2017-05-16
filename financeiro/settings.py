@@ -38,7 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'financeiro',
-    'crispy_forms',
+    'wkhtmltopdf',
+    'django_admin_bootstrapped.bootstrap3',
+    'django_admin_bootstrapped',
 )
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 MIDDLEWARE_CLASSES = (
